@@ -1,5 +1,5 @@
 function computerPlay() {
-    number = Math.floor(Math.random() * 100) + 1;
+    const number = Math.floor(Math.random() * 100) + 1;
 
     if (number < 33) {
         return 'Rock';

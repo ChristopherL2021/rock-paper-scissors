@@ -20,12 +20,41 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         return playerSelection + " ties " + computerSelection;
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        playerScore += 1;
         return playerSelection + " beats " + computerSelection + ", player wins";
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        playerScore += 1;
         return playerSelection + " beats " + computerSelection + ", player wins";
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        playerScore += 1;
         return playerSelection + " beats " + computerSelection + ", player wins";
     } else {
+        computerScore += 1;
         return computerSelection + " beats " + playerSelection + ", computer wins";
     }
 }
+
+function winner(playerScore, computerScore) {
+    if (playerScore === computerScore) {
+        return "Its a tie";
+    } else if (playerScore > computerScore) {
+        return "Player wins " + playerScore + " to " + computerScore;
+    } else {
+        return "Computer wins " + computerScore + " to " + playerScore;
+    }
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        const playerSelection = prompt("Enter rock, paper or scissors")
+        const computerSelection = computerPlay();
+
+        console.log(playRound(playerSelection, computerSelection));
+    }
+    
+    console.log(winner(playerScore, computerScore));
+}
+
+let playerScore = 0;
+let computerScore = 0;
+game();

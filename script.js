@@ -1,3 +1,4 @@
+// Makes a random choice for the computer player
 function computerPlay() {
     const number = Math.floor(Math.random() * 100) + 1;
 
@@ -10,6 +11,7 @@ function computerPlay() {
     }
 }
 
+// Plays a single round of the game
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
 
@@ -34,6 +36,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+// Finds the winner of the game
 function winner(playerScore, computerScore) {
     if (playerScore === computerScore) {
         return "Its a tie";
@@ -44,6 +47,7 @@ function winner(playerScore, computerScore) {
     }
 }
 
+// Main game function
 function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt("Enter rock, paper or scissors")
@@ -55,6 +59,9 @@ function game() {
     console.log(winner(playerScore, computerScore));
 }
 
+// Sets scores for player and computer
 let playerScore = 0;
 let computerScore = 0;
+
+// Starts the game
 game();

@@ -19,4 +19,4 @@ This is a game showcasing fundamental JavaScript skills such as loops, functions
 <br>
 
 ## How to play
-The game is played in the console. Right click anywhere on the blank page and select inspect if using the Chrome browser, otherwise open up the console inside the dev tools of whatever browser you are using. Click the console tab and refresh the page. You will recieve a prompt to enter either Rock, Paper or Scissors. The game is played for 5 rounds with the winner shown at the end.
+To start the game just pick rock, paper or scissors. The game will play till you or the computer wins 5 rounds. once someone wins the winner will be displayed. If you wish to start another game just pick rock, paper or scissors and a new game will begin. Have fun!

@@ -1,4 +1,4 @@
-const computerChoices = ["Rock", "Paper", "Scissors"];
+const computerChoices = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
   let randomChoice = computerChoices[Math.floor(Math.random() * computerChoices.length)];

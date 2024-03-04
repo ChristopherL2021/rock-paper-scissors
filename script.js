@@ -36,12 +36,12 @@ function playGame() {
       return "It's a tie!";
     }
 
-    if (isPlayerWinner) {
+    if (isPlayerWinner(playerSelection, computerSelection)) {
       playerScore += 1;
-      return playerWins();
+      return playerWins(playerSelection, computerSelection);
     } else {
       computerScore += 1;
-      return computerWins();
+      return computerWins(playerSelection, computerSelection);
     }
   }
 

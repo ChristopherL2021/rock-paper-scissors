@@ -12,6 +12,13 @@ function playGame() {
     return randomChoice;
   }
 
+  function firstLetterToUpper(string) {
+    let firstLetter = string.at(0);
+    firstLetter = firstLetter.toUpperCase();
+    string = string.slice(1);
+    return firstLetter + string;
+  }
+
   function isPlayerWinner(playerSelection, computerSelection) {
     if ((playerSelection === "rock" && computerSelection === "scissors") ||
         (playerSelection === "scissors" && computerSelection === "paper") ||
@@ -23,10 +30,14 @@ function playGame() {
   }
 
   function playerWins(playerSelection, computerSelection) {
+    playerSelection = firstLetterToUpper(playerSelection);
+    computerSelection = firstLetterToUpper(computerSelection);
     return `${playerSelection} beats ${computerSelection}, Player wins!`;
   }
 
   function computerWins(playerSelection, computerSelection) {
+    playerSelection = firstLetterToUpper(playerSelection);
+    computerSelection = firstLetterToUpper(computerSelection);
     return `${computerSelection} beats ${playerSelection}, Computer wins!`;
   }
 

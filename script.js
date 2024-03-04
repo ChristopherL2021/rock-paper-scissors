@@ -22,6 +22,10 @@ function playGame() {
     }   
   }
 
+  function playerWins(playerSelection, computerSelection) {
+    return `${playerSelection} beats ${computerSelection}, Player wins!`;
+  }
+
   function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     if (playerSelection === computerSelection) {
@@ -30,7 +34,7 @@ function playGame() {
 
     if (isPlayerWinner) {
       playerScore += 1;
-      return `${playerSelection} beats ${computerSelection}, Player wins!`
+      return playerWins();
     } else {
       computerScore += 1;
       return `${computerSelection} beats ${playerSelection}, Computer wins!`      

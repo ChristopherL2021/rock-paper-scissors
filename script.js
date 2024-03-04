@@ -29,6 +29,14 @@ function playGame() {
     }   
   }
 
+  function gameWinner(playerScore, computerScore) {
+    if (playerScore > computerScore) {
+      return `Player wins, ${playerScore} to ${computerScore}`;
+    } else {
+      return `Computer wins, ${computerScore} to ${playerScore}`;
+    }
+  }
+
   function playerWins(playerSelection, computerSelection) {
     playerSelection = firstLetterToUpper(playerSelection);
     computerSelection = firstLetterToUpper(computerSelection);
@@ -76,5 +84,5 @@ function playGame() {
   computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
 
-  console.log(computerScore, playerScore);
+  console.log(gameWinner(playerScore, computerScore));
 }
